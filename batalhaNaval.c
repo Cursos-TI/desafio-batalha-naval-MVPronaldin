@@ -1,4 +1,6 @@
 #include <stdio.h>
+#define LINHAS 9
+#define COLUNAS 9
 
 // Desafio Batalha Naval - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
@@ -9,7 +11,7 @@ int main() {
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
-
+    /*
     int tabuleiro [10][10] = {
         {0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0},
@@ -54,12 +56,47 @@ int main() {
     printf("08 %d %d %d %d %d %d %d %d %d %d \n", tabuleiro[7][0], tabuleiro[7][1], tabuleiro[7][2], tabuleiro[7][3], tabuleiro[7][4], tabuleiro[7][5], tabuleiro[7][6], tabuleiro[7][7], tabuleiro[7][8], tabuleiro[7][9] );
     printf("09 %d %d %d %d %d %d %d %d %d %d \n", tabuleiro[8][0], tabuleiro[8][1], tabuleiro[8][2], tabuleiro[8][3], tabuleiro[8][4], tabuleiro[8][5], tabuleiro[8][6], tabuleiro[8][7], tabuleiro[8][8], tabuleiro[8][9] );
     printf("10 %d %d %d %d %d %d %d %d %d %d \n", tabuleiro[9][0], tabuleiro[9][1], tabuleiro[9][2], tabuleiro[9][3], tabuleiro[9][4], tabuleiro[9][5], tabuleiro[9][6], tabuleiro[9][7], tabuleiro[9][8], tabuleiro[9][9] );
-    
-    
+    */
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
     // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
     // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
+
+    int matriz[LINHAS][COLUNAS];
+    int preencher = 0;  
+    
+    //inicializando tabuleiro com 0
+    for (int i = 0; i <= 9; i++){
+        for(int j = 0; j <= 9; j++){
+            matriz[i][j] = preencher;
+        };
+    };
+    //posicionando navio 1
+    matriz [7][1] = 3;
+    matriz [8][1] = 3;
+    matriz [9][1] = 3;
+    //posicionando navio 2
+    matriz[1][5] = 3;
+    matriz[1][6] = 3;
+    matriz[1][7] = 3;
+    //posicionando navio 3
+    matriz[5][5] = 3;
+    matriz[6][6] = 3;
+    matriz[7][7] = 3;
+    //posicionando navio 4
+    matriz[3][6] = 3;
+    matriz[4][7] = 3;
+    
+    //exibir o tabuleiro
+    printf("  A B C D E F G H I J \n");
+    for(int i = 0; i <= LINHAS; i++){
+        printf("%d ", i + 1);
+        for(int j = 0; j <= COLUNAS; j++){
+            printf("%d ", matriz[i][j]);
+        };
+        printf("\n");
+    };
+
 
     // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
