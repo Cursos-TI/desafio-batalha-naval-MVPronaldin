@@ -1,6 +1,6 @@
 #include <stdio.h>
-#define LINHAS 9
-#define COLUNAS 9
+#define LINHAS 10
+#define COLUNAS 10
 
 // Desafio Batalha Naval - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
@@ -66,8 +66,8 @@ int main() {
     int preencher = 0;  
     
     //inicializando tabuleiro com 0
-    for (int i = 0; i <= 9; i++){
-        for(int j = 0; j <= 9; j++){
+    for (int i = 0; i <= LINHAS - 1; i++){
+        for(int j = 0; j <= COLUNAS - 1; j++){
             matriz[i][j] = preencher;
         };
     };
@@ -88,16 +88,15 @@ int main() {
     matriz[4][7] = 3;
     
     //exibir o tabuleiro
-    printf("  A B C D E F G H I J \n");
-    for(int i = 0; i <= LINHAS; i++){
-        printf("%d ", i + 1);
-        for(int j = 0; j <= COLUNAS; j++){
+    printf("   A B C D E F G H I J \n");
+    for(int i = 0; i <= LINHAS - 1; i++){
+        printf("%02d ", i + 1);
+        for(int j = 0; j <= COLUNAS - 1; j++){
             printf("%d ", matriz[i][j]);
         };
         printf("\n");
     };
-
-
+    
     // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
     // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
@@ -121,3 +120,5 @@ int main() {
 
     return 0;
 }
+
+
