@@ -101,7 +101,35 @@ int main() {
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
     // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
     // Sugestão: Exiba o tabuleiro com as áreas afetadas, utilizando 0 para áreas não afetadas e 1 para áreas atingidas.
-
+    /*
+    //posicionando a habilidade especial em matriz[0][3]
+    matriz[0][3]=1;
+    for (int i = 0; i < LINHAS; i++){
+        for (int j = 0; j < COLUNAS; j++){
+            if (matriz[i][j] = 1) {
+                matriz [i+1][j] +=1;
+                matriz [i+1][j+1] +=1;
+                matriz [i+1][j-1] +=1;
+                matriz [i+2][j] +=1;
+                matriz [i+2][j-1] +=1;
+                matriz [i+2][j-2] +=1;
+                matriz [i+2][j+1] +=1;
+                matriz [i+2][j+2] +=1;
+            }
+            break;
+        };break;
+    };
+    
+    //exibir o tabuleiro
+    printf("   A B C D E F G H I J \n");
+    for(int i = 0; i <= LINHAS - 1; i++){
+        printf("%02d ", i + 1);
+        for(int j = 0; j <= COLUNAS - 1; j++){
+            printf("%d ", matriz[i][j]);
+        };
+        printf("\n");
+    };
+    */
     // Exemplos de exibição das habilidades:
     // Exemplo para habilidade em cone:
     // 0 0 1 0 0
